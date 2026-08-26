@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XRP SHIRUTO — Bangkitkan Penjaga Anda</title>
+<meta name="description" content="XRP SHIRUTO — gabungan IP-PA1, Beta-Glukan &amp; Vitamin C yang terbukti secara klinikal untuk menyokong sistem imun. Berpaten di 10+ negara. Tempah sekarang.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="XRP SHIRUTO — Bangkitkan Penjaga Anda">
+<meta property="og:description" content="Gabungan nutrien untuk menyokong kesihatan badan yang optimum. Terbukti secara klinikal, berpaten di 10+ negara.">
+<meta property="og:image" content="images/hero.webp">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --navy:#1B2564;
+    --navy-light:#33459E;
+    --ink:#212540;
+    --ink-soft:#565C78;
+    --powder:#E9F1FA;
+    --powder-2:#F5F8FC;
+    --gold:#AC7F2A;
+    --gold-soft:#EDE0C3;
+    --line:#DCE3F1;
+    --white:#FFFFFF;
+    --radius:20px;
+    --shadow: 0 25px 50px -30px rgba(20,28,80,.45);
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Inter',sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  h1,h2,h3{
+    font-family:'Newsreader',serif;
+    color:var(--navy);
+    margin:0 0 .5em;
+    letter-spacing:-.01em;
+  }
+  p{line-height:1.65;color:var(--ink-soft);}
+  a{color:inherit;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  .section{padding:88px 0;}
+  .section.alt{background:var(--powder-2);}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--gold);font-weight:600;margin-bottom:14px;
+  }
+  .eyebrow .mark{
+    width:14px;height:14px;flex:none;
+  }
+  .section-head{max-width:640px;margin-bottom:44px;}
+  .section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
+  .section-head h2{font-size:clamp(28px,3.4vw,38px);font-weight:500;}
+  .section-head p{font-size:16.5px;}
+
+  /* ---------- NAV ---------- */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.9);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:var(--maxw);margin:0 auto;padding:14px 24px;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:10px;
+  }
+  .brand{display:flex;align-items:center;gap:9px;font-family:'Newsreader',serif;font-weight:600;font-size:19px;color:var(--navy);white-space:nowrap;}
+  .brand .mark{width:22px;height:22px;}
+  .nav-cta{
+    background:var(--navy);color:#fff;border:none;
+    padding:11px 22px;border-radius:999px;
+    font-family:'Inter';font-weight:600;font-size:14px;
+    cursor:pointer;text-decoration:none;display:inline-block;
+    transition:transform .15s ease, background .15s ease;
+  }
+  .nav-cta:hover{background:var(--navy-light);transform:translateY(-1px);}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:linear-gradient(180deg,var(--powder) 0%, #fff 100%);
+    padding:64px 0 20px;
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid;grid-template-columns:.92fr 1.15fr;gap:44px;align-items:center;
+  }
+  .hero h1{font-size:clamp(34px,5vw,54px);font-weight:500;line-height:1.08;}
+  .hero h1 em{font-style:italic;color:var(--gold);}
+  .hero-sub{font-size:17.5px;max-width:460px;margin-bottom:28px;}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px;}
+  .btn-primary{
+    background:var(--navy);color:#fff;border:none;
+    padding:16px 30px;border-radius:999px;
+    font-family:'Inter';font-weight:600;font-size:15.5px;
+    cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;
+    box-shadow:var(--shadow);
+    transition:transform .15s ease, background .15s ease;
+  }
+  .btn-primary:hover{background:var(--navy-light);transform:translateY(-2px);}
+  .btn-ghost{
+    border:1.5px solid var(--line);background:#fff;color:var(--navy);
+    padding:16px 26px;border-radius:999px;font-weight:600;font-size:15.5px;
+    text-decoration:none;display:inline-flex;align-items:center;
+  }
+  .stat-row{display:flex;gap:28px;flex-wrap:wrap;}
+  .stat{font-family:'IBM Plex Mono',monospace;}
+  .stat b{display:block;font-size:24px;color:var(--navy);}
+  .stat span{font-size:12px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.06em;}
+  .hero-art{position:relative;}
+  .hero-art img{
+    border-radius:24px;box-shadow:var(--shadow);
+    width:100%;height:auto;
+    object-fit:cover;
+  }
+
+  .trust-strip{
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    background:#fff;
+  }
+  .trust-inner{
+    max-width:var(--maxw);margin:0 auto;padding:20px 24px;
+    display:flex;flex-wrap:wrap;gap:14px 34px;justify-content:center;
+    font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.03em;
+    color:var(--navy);
+  }
+  .trust-inner span{display:flex;align-items:center;gap:8px;}
+  .trust-inner span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);display:inline-block;}
+
+  /* ---------- IMAGE PANELS (pre-designed infographics) ---------- */
+  .panel{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    overflow:hidden;box-shadow:var(--shadow);
+  }
+  .panel img{width:100%;}
+
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;}
+  .two-col.reverse .col-text{order:2;}
+  .quote{
+    font-family:'Newsreader',serif;font-style:italic;color:var(--navy);
+    font-size:20px;line-height:1.5;border-left:3px solid var(--gold);
+    padding-left:20px;margin:18px 0;
+  }
+  .quote-attr{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.05em;}
+
+  /* ---------- TESTIMONIALS ---------- */
+  .testi-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
+  }
+  .testi-grid a{
+    display:block;border-radius:14px;overflow:hidden;border:1px solid var(--line);
+    box-shadow:0 14px 30px -22px rgba(20,28,80,.5);
+    cursor:zoom-in;
+  }
+  .testi-grid img{width:100%;height:100%;object-fit:cover;aspect-ratio:1/1.05;transition:transform .35s ease;}
+  .testi-grid a:hover img{transform:scale(1.04);}
+  .testi-grid a:nth-child(1),.testi-grid a:nth-child(5){grid-row:span 1;}
+
+  /* lightbox */
+  .lightbox{
+    position:fixed;inset:0;background:rgba(17,20,40,.86);
+    display:none;align-items:center;justify-content:center;z-index:200;padding:30px;
+  }
+  .lightbox.open{display:flex;}
+  .lightbox img{max-height:88vh;max-width:92vw;border-radius:10px;}
+  .lightbox-close{
+    position:absolute;top:22px;right:26px;color:#fff;font-size:28px;
+    background:none;border:none;cursor:pointer;line-height:1;
+  }
+
+  /* ---------- ORDER FORM ---------- */
+  .order-section{
+    background:var(--navy);color:#fff;position:relative;
+  }
+  .order-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:52px;align-items:flex-start;}
+  .order-section h2{color:#fff;}
+  .order-section .section-head p{color:#C6CCE8;}
+  .order-section .eyebrow{color:var(--gold-soft);}
+  .package-list{display:flex;flex-direction:column;gap:12px;margin-top:26px;}
+  .package{
+    display:flex;align-items:center;justify-content:space-between;
+    border:1.5px solid rgba(255,255,255,.18);border-radius:14px;
+    padding:16px 18px;cursor:pointer;transition:all .15s ease;
+    background:rgba(255,255,255,.04);
+  }
+  .package.selected{border-color:var(--gold-soft);background:rgba(237,224,195,.12);}
+  .package .pk-left{display:flex;align-items:center;gap:12px;}
+  .package input{accent-color:var(--gold-soft);width:18px;height:18px;}
+  .package .pk-name{font-weight:600;font-size:15px;}
+  .package .pk-note{font-size:12.5px;color:#AEB6DA;}
+  .package .pk-price{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:16px;text-align:right;flex:none;}
+  .pk-original{display:block;font-size:12px;color:#9CA3C4;text-decoration:line-through;font-weight:500;}
+  .pk-new{display:block;font-size:19px;color:var(--gold-soft);font-weight:700;}
+  .pk-free{color:var(--gold-soft);font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.02em;}
+  .badge-popular{
+    background:var(--gold-soft);color:var(--navy);font-size:10.5px;font-weight:700;
+    padding:2px 8px;border-radius:999px;margin-left:8px;letter-spacing:.03em;
+    white-space:nowrap;display:inline-block;
+  }
+
+  .form-card{
+    background:#fff;color:var(--ink);border-radius:var(--radius);
+    padding:34px;box-shadow:0 30px 60px -30px rgba(0,0,0,.5);
+  }
+  .form-card h3{font-size:21px;margin-bottom:4px;}
+  .form-card .sub{font-size:13.5px;color:var(--ink-soft);margin-bottom:22px;}
+  .field{margin-bottom:16px;}
+  .field label{display:block;font-size:13px;font-weight:600;color:var(--navy);margin-bottom:6px;}
+  .field input,.field textarea{
+    width:100%;border:1.4px solid var(--line);border-radius:10px;
+    padding:12px 14px;font-family:'Inter';font-size:14.5px;color:var(--ink);
+    background:var(--powder-2);
+  }
+  .field input:focus,.field textarea:focus{outline:2px solid var(--navy-light);outline-offset:1px;}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  textarea{resize:vertical;min-height:70px;}
+  .hp{position:absolute;left:-9999px;top:-9999px;}
+  .submit-btn{
+    width:100%;background:var(--navy);color:#fff;border:none;
+    padding:16px;border-radius:12px;font-weight:700;font-size:15.5px;
+    cursor:pointer;margin-top:6px;transition:background .15s ease;
+  }
+  .submit-btn:hover{background:var(--navy-light);}
+  .submit-btn:disabled{opacity:.6;cursor:wait;}
+  .form-note{font-size:12px;color:var(--ink-soft);text-align:center;margin-top:12px;}
+  .err{color:#B4293A;font-size:12.5px;margin-top:5px;display:none;}
+
+  /* ---------- FAQ / footer image sections just reuse .panel ---------- */
+
+  footer{
+    background:var(--ink);color:#B7BCD6;padding:40px 0 26px;
+  }
+  .footer-inner{max-width:var(--maxw);margin:0 auto;padding:0 24px;text-align:center;}
+  footer .brand{color:#fff;justify-content:center;margin-bottom:10px;}
+  footer p{color:#9298B6;font-size:12.5px;max-width:640px;margin:0 auto 6px;}
+
+  /* ---------- THANK YOU MODAL ---------- */
+  .modal-overlay{
+    position:fixed;inset:0;background:rgba(17,20,40,.6);
+    display:none;align-items:center;justify-content:center;z-index:300;padding:20px;
+  }
+  .modal-overlay.open{display:flex;}
+  .modal{
+    background:#fff;border-radius:22px;max-width:420px;width:100%;
+    padding:38px 30px;text-align:center;box-shadow:0 40px 80px -30px rgba(0,0,0,.5);
+    animation:pop .25s ease;
+  }
+  @keyframes pop{from{transform:scale(.92);opacity:0;}to{transform:scale(1);opacity:1;}}
+  .modal .check{
+    width:56px;height:56px;border-radius:50%;background:var(--powder);
+    display:flex;align-items:center;justify-content:center;margin:0 auto 18px;
+  }
+  .modal h3{color:var(--navy);font-size:22px;margin-bottom:10px;}
+  .modal p{font-size:15px;margin-bottom:24px;}
+  .modal button{
+    background:var(--navy);color:#fff;border:none;padding:13px 26px;
+    border-radius:999px;font-weight:600;cursor:pointer;font-size:14.5px;
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-art{order:-1;}
+    .two-col{grid-template-columns:1fr;}
+    .two-col.reverse .col-text{order:0;}
+    .order-grid{grid-template-columns:1fr;}
+    .testi-grid{grid-template-columns:repeat(2,1fr);}
+    .section{padding:60px 0;}
+    .field-row{grid-template-columns:1fr;}
+  }
+  @media (max-width:520px){
+    .nav-cta{padding:9px 16px;font-size:13px;}
+    .brand{font-size:16px;}
+    .stat-row{gap:20px;}
+    .form-card{padding:24px;}
+    .testi-grid{grid-template-columns:1fr 1fr;gap:12px;}
+    .package .pk-name{font-size:14px;}
+    .badge-popular{display:block;width:max-content;margin-left:0;margin-top:6px;}
+    .package{padding:14px;}
+    .hero-ctas{flex-direction:column;align-items:stretch;}
+    .hero-ctas .btn-primary,.hero-ctas .btn-ghost{justify-content:center;}
+  }
+  @media (max-width:400px){
+    .testi-grid{grid-template-columns:1fr;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important;transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<div class="nav">
+  <div class="nav-inner">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M4.2 6.5l15.6 11M4.2 17.5l15.6-11M2 12h20" stroke="#AC7F2A" stroke-width="1.6"/></svg>
+      XRP SHIRUTO
+    </div>
+    <a href="#order" class="nav-cta">Tempah Sekarang</a>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">
+        <svg class="mark" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M4.2 6.5l15.6 11M4.2 17.5l15.6-11M2 12h20" stroke="#AC7F2A" stroke-width="1.6"/></svg>
+        Diimport dari Jepun
+      </div>
+      <h1>Bangkitkan <em>Penjaga</em><br>Semula Jadi Anda</h1>
+      <p class="hero-sub">Gabungan nutrien sinergi — IP-PA1, Beta-Glukan &amp; Vitamin C — untuk menyokong sistem imun dan kesihatan badan yang optimum, terbukti secara klinikal dan berpaten di lebih 10 negara.</p>
+      <div class="hero-ctas">
+        <a href="#order" class="btn-primary">
+          Buat Tempahan Sekarang
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#bahan" class="btn-ghost">Lihat Bahan Utama</a>
+      </div>
+      <div class="stat-row">
+        <div class="stat"><b>1000x</b><span>Aktiviti Makrofaj</span></div>
+        <div class="stat"><b>10+</b><span>Negara Berpaten</span></div>
+        <div class="stat"><b>71%</b><span>Kurangkan Dermatitis</span></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img src="images/hero.webp" alt="Botol XRP SHIRUTO bersama gandum semula jadi — botanical beverage mix blueberry dengan ekstrak gandum yang ditapai">
+    </div>
+  </div>
+</section>
+
+<div class="trust-strip">
+  <div class="trust-inner">
+    <span>Disahkan HALAL (NAHA)</span>
+    <span>100% Berasaskan Tumbuhan</span>
+    <span>Bebas Gluten</span>
+    <span>Diimport dari Jepun</span>
+    <span>Berpaten di 10+ Negara</span>
+  </div>
+</div>
+
+<!-- ============ BAHAN UTAMA ============ -->
+<section class="section" id="bahan">
+  <div class="wrap">
+    <div class="section-head center">
+      <div class="eyebrow" style="justify-content:center;">
+        <svg class="mark" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M4.2 6.5l15.6 11M4.2 17.5l15.6-11M2 12h20" stroke="#AC7F2A" stroke-width="1.6"/></svg>
+        Formulasi
+      </div>
+      <h2>Tiga bahan, satu matlamat — imuniti yang lebih bijak</h2>
+      <p>Setiap kapsul XRP SHIRUTO diformulasikan dengan bahan aktif yang saling melengkapi, disokong lebih 40 tahun penyelidikan saintifik.</p>
+    </div>
+    <div class="panel"><img src="images/ingredients.webp" alt="Bahan Utama XRP SHIRUTO: IP-PA1, Beta-Glukan, Vitamin C"></div>
+  </div>
+</section>
+
+<!-- ============ PROSES PENGHASILAN ============ -->
+<section class="section alt">
+  <div class="wrap two-col">
+    <div class="col-text">
+      <div class="eyebrow">
+        <svg class="mark" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M4.2 6.5l15.6 11M4.2 17.5l15.6-11M2 12h20" stroke="#AC7F2A" stroke-width="1.6"/></svg>
+        Sains di sebalik IP-PA1
+      </div>
+      <h2>Proses penapaian berpaten yang mengaktifkan sel imun anda</h2>
+      <p>Ekstrak gandum yang melalui proses penapaian unik ini mengaktifkan makrofaj — sel pertahanan utama badan — supaya bertindak balas lebih cepat dan lebih bijak terhadap ancaman dari luar.</p>
+    </div>
+    <div class="panel"><img src="images/process.webp" alt="Proses penghasilan IP-PA1 yang berpaten"></div>
+  </div>
+</section>
+
+<!-- ============ PROFESSOR ENDORSEMENT ============ -->
+<section class="section">
+  <div class="wrap two-col reverse">
+    <div class="panel" style="max-width:380px;margin:0 auto;">
+      <img src="images/professor.webp" alt="Prof. Hiroyuki Inagawa, PhD — Bapa IP-PA1">
+    </div>
+    <div class="col-text">
+      <div class="eyebrow">
+        <svg class="mark" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M4.2 6.5l15.6 11M4.2 17.5l15.6-11M2 12h20" stroke="#AC7F2A" stroke-width="1.6"/></svg>
+        Disokong Penyelidik
+      </div>
+      <h2>Diketuai oleh bapa pencipta IP-PA1 sendiri</h2>
+      <p class="quote">"Selama lebih 40 tahun, saya telah menjalankan penyelidikan mengenai sistem pertahanan tubuh yang dikenali sebagai imuniti semula jadi — khususnya sel imun yang dikenali sebagai makrofaj."</p>
+      <p class="quote-attr">Prof. Hiroyuki Inagawa, PhD — CTO, Technology Research Association for Control of Innate Immunity</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TERBUKTI KLINIKAL ============ -->
+<section class="section alt">
+  <div class="wrap">
+    <div class="section-head center">
+      <div class="eyebrow" style="justify-content:center;">
+        <svg class="mark" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M4.2 6.5l15.6 11M4.2 17.5l15.6-11M2 12h20" stroke="#AC7F2A" stroke-width="1.6"/></svg>
+        Data Klinikal
+      </div>
+      <h2>Bukan sekadar dakwaan — disokong data</h2>
+      <p>Keputusan kajian menunjukkan peningkatan ketara dalam pengaktifan makrofaj, perlindungan kulit dan pengawalaturan sistem imun.</p>
+    </div>
+    <div class="panel"><img src="images/proof.webp" alt="Terbukti secara klinikal: pengaktifan makrofaj, melindungi badan, mengawal atur sistem imun"></div>
+  </div>
+</section>
+
+<!-- ============ CERT ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head center">
+      <div class="eyebrow" style="justify-content:center;">
+        <svg class="mark" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M4.2 6.5l15.6 11M4.2 17.5l15.6-11M2 12h20" stroke="#AC7F2A" stroke-width="1.6"/></svg>
+        Pengiktirafan Global
+      </div>
+      <h2>Berpaten di lebih 10 buah negara</h2>
+    </div>
+    <div class="panel"><img src="images/cert.webp" alt="Sijil paten XRP SHIRUTO dari Jepun, Amerika Syarikat dan lain-lain"></div>
+  </div>
+</section>
+
+<!-- ============ WHO CAN USE ============ -->
+<section class="section alt">
+  <div class="wrap">
+    <div class="panel"><img src="images/who-can-use.webp" alt="XRP SHIRUTO disyorkan untuk kanak-kanak, orang dewasa dan orang tua"></div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section" id="testimoni">
+  <div class="wrap">
+    <div class="section-head center">
+      <div class="eyebrow" style="justify-content:center;">
+        <svg class="mark" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M4.2 6.5l15.6 11M4.2 17.5l15.6-11M2 12h20" stroke="#AC7F2A" stroke-width="1.6"/></svg>
+        Suara Pelanggan
+      </div>
+      <h2>Dipercayai oleh ribuan keluarga</h2>
+      <p>Sebahagian daripada maklum balas sebenar pelanggan XRP SHIRUTO.</p>
+    </div>
+    <div class="testi-grid">
+      <a href="images/testi1.webp" class="lb-trigger"><img src="images/testi1.webp" alt="Testimoni pelanggan 1" loading="lazy"></a>
+      <a href="images/testi2.webp" class="lb-trigger"><img src="images/testi2.webp" alt="Testimoni pelanggan 2" loading="lazy"></a>
+      <a href="images/testi3.webp" class="lb-trigger"><img src="images/testi3.webp" alt="Testimoni pelanggan 3" loading="lazy"></a>
+      <a href="images/testi4.webp" class="lb-trigger"><img src="images/testi4.webp" alt="Testimoni pelanggan 4" loading="lazy"></a>
+      <a href="images/testi5.webp" class="lb-trigger"><img src="images/testi5.webp" alt="Testimoni pelanggan 5" loading="lazy"></a>
+      <a href="images/testi6.webp" class="lb-trigger"><img src="images/testi6.webp" alt="Testimoni pelanggan 6" loading="lazy"></a>
+      <a href="images/testi7.webp" class="lb-trigger"><img src="images/testi7.webp" alt="Testimoni pelanggan 7" loading="lazy"></a>
+      <a href="images/bottle.webp" class="lb-trigger"><img src="images/bottle.webp" alt="XRP SHIRUTO botol produk" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section alt">
+  <div class="wrap">
+    <div class="panel"><img src="images/qna.webp" alt="Soalan Lazim mengenai XRP SHIRUTO"></div>
+  </div>
+</section>
+
+<!-- ============ ORDER FORM ============ -->
+<section class="section order-section" id="order">
+  <div class="wrap order-grid">
+    <div>
+      <div class="eyebrow">
+        <svg class="mark" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M4.2 6.5l15.6 11M4.2 17.5l15.6-11M2 12h20" stroke="#EDE0C3" stroke-width="1.6"/></svg>
+        Tempahan
+      </div>
+      <div class="section-head">
+        <h2>Pilih pakej anda</h2>
+        <p>Isi maklumat penghantaran di sebelah dan pasukan kami akan menghubungi anda untuk pengesahan tempahan.</p>
+      </div>
+      <div class="package-list" id="packageList">
+        <label class="package selected" data-price="74" data-name="1 Botol">
+          <span class="pk-left">
+            <input type="radio" name="package" value="1 Botol - RM69 + RM5 Penghantaran (Jumlah RM74)" checked>
+            <span>
+              <span class="pk-name">1 Botol</span><br>
+              <span class="pk-note">Bekalan 30 hari · + RM5 penghantaran</span>
+            </span>
+          </span>
+          <span class="pk-price">
+            <span class="pk-original">RM129</span>
+            <span class="pk-new">RM69</span>
+          </span>
+        </label>
+        <label class="package" data-price="99" data-name="Beli 2 Percuma 1 Botol">
+          <span class="pk-left">
+            <input type="radio" name="package" value="Beli 2 Percuma 1 Botol (3 Botol) - RM99">
+            <span>
+              <span class="pk-name">Beli 2 <span class="pk-free">PERCUMA</span> 1 Botol</span><br>
+              <span class="pk-note">3 Botol · Pos Percuma</span>
+            </span>
+          </span>
+          <span class="pk-price">
+            <span class="pk-original">RM238</span>
+            <span class="pk-new">RM99</span>
+          </span>
+        </label>
+        <label class="package" data-price="129" data-name="Beli 3 Percuma 2 Botol">
+          <span class="pk-left">
+            <input type="radio" name="package" value="Beli 3 Percuma 2 Botol (5 Botol) - RM129">
+            <span>
+              <span class="pk-name">Beli 3 <span class="pk-free">PERCUMA</span> 2 Botol <span class="badge-popular">PALING POPULAR</span></span><br>
+              <span class="pk-note">5 Botol · Pos Percuma</span>
+            </span>
+          </span>
+          <span class="pk-price">
+            <span class="pk-original">RM329</span>
+            <span class="pk-new">RM129</span>
+          </span>
+        </label>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <h3>Maklumat Penghantaran</h3>
+      <p class="sub">Tiada bayaran diperlukan sekarang. Kami akan hubungi anda untuk pengesahan tempahan.</p>
+      <form id="orderForm" autocomplete="on">
+        <!-- honeypot spam trap -->
+        <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off">
+
+        <div class="field">
+          <label for="fullName">Nama Penuh</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Contoh: Ahmad bin Ali" required>
+        </div>
+
+        <div class="field">
+          <label for="phone">No. Telefon</label>
+          <input type="tel" id="phone" name="phone" placeholder="Contoh: 012-3456789" required pattern="[0-9+\-\s]{8,15}">
+        </div>
+
+        <div class="field">
+          <label for="address">Alamat Penghantaran</label>
+          <textarea id="address" name="address" placeholder="No rumah, nama jalan, taman, bandar" required></textarea>
+        </div>
+
+        <div class="field">
+          <label for="postcode">Poskod</label>
+          <input type="text" id="postcode" name="postcode" placeholder="Contoh: 40000" required pattern="[0-9]{5}" maxlength="5" inputmode="numeric">
+        </div>
+
+        <input type="hidden" id="packageValue" name="package" value="1 Botol - RM69 + RM5 Penghantaran (Jumlah RM74)">
+        <input type="hidden" id="packagePrice" name="price" value="74">
+
+
+        <button type="submit" class="submit-btn" id="submitBtn">Sahkan Tempahan</button>
+        <p class="form-note">Dengan menghantar borang ini, anda bersetuju untuk dihubungi mengenai tempahan anda.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="footer-inner">
+    <div class="brand">XRP SHIRUTO</div>
+    <p>XRP SHIRUTO ialah makanan kesihatan 100% berasaskan tumbuhan, disahkan HALAL oleh Nippon Asia Halal Association (NAHA). Produk ini tidak dimaksudkan untuk mendiagnosis, merawat atau menyembuhkan sebarang penyakit. Dapatkan nasihat pengamal kesihatan sebelum penggunaan jika anda mempunyai keadaan perubatan sedia ada.</p>
+    <p>© 2026 XRP SHIRUTO. Hak cipta terpelihara.</p>
+  </div>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Tutup">&times;</button>
+  <img src="" alt="" id="lightboxImg">
+</div>
+
+<!-- ============ THANK YOU MODAL ============ -->
+<div class="modal-overlay" id="thankYouModal">
+  <div class="modal">
+    <div class="check">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="#1B2564" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <h3>Terima kasih!</h3>
+    <p>Terima kasih atas pesanan anda. Barang akan sampai dalam tempoh 2 hingga 4 hari.</p>
+    <button id="modalClose">Selesai</button>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- FACEBOOK PIXEL — replace YOUR_PIXEL_ID_HERE with your real ID -->
+<!-- ============================================================ -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'YOUR_PIXEL_ID_HERE');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+
+<!-- ============================================================ -->
+<!-- GOOGLE SHEETS ("Excel") ENDPOINT — replace with your Apps    -->
+<!-- Script Web App URL. See README.md for setup instructions.    -->
+<!-- ============================================================ -->
+<script>
+  const SHEET_ENDPOINT_URL = "https://script.google.com/macros/s/AKfycbxtCyr6P_HBhLRYsLIqFIJu9vYg2cbcUIARp79AuDVjrUd9bYEWW_bTwmdzDZHdN_Oj/exec";
+
+  // ---- package selector ----
+  const packageLabels = document.querySelectorAll('.package');
+  const packageValueInput = document.getElementById('packageValue');
+  const packagePriceInput = document.getElementById('packagePrice');
+
+  packageLabels.forEach(label => {
+    label.addEventListener('click', () => {
+      packageLabels.forEach(l => l.classList.remove('selected'));
+      label.classList.add('selected');
+      const input = label.querySelector('input[type=radio]');
+      input.checked = true;
+      packageValueInput.value = input.value;
+      packagePriceInput.value = label.getAttribute('data-price');
+    });
+  });
+
+  // ---- lightbox for testimonials ----
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  document.querySelectorAll('.lb-trigger').forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      lightboxImg.src = trigger.getAttribute('href');
+      lightbox.classList.add('open');
+    });
+  });
+  document.getElementById('lightboxClose').addEventListener('click', () => lightbox.classList.remove('open'));
+  lightbox.addEventListener('click', (e) => { if(e.target === lightbox) lightbox.classList.remove('open'); });
+
+  // ---- thank you modal ----
+  const thankYouModal = document.getElementById('thankYouModal');
+  document.getElementById('modalClose').addEventListener('click', () => {
+    thankYouModal.classList.remove('open');
+  });
+
+  // ---- order form submit ----
+  const orderForm = document.getElementById('orderForm');
+  const submitBtn = document.getElementById('submitBtn');
+
+  orderForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // honeypot check — if filled, silently drop (likely a bot)
+    if (orderForm.company.value) { return; }
+
+    const formData = new FormData(orderForm);
+    const payload = {
+      fullName: formData.get('fullName').trim(),
+      phone: formData.get('phone').trim(),
+      address: formData.get('address').trim(),
+      postcode: formData.get('postcode').trim(),
+      package: formData.get('package'),
+      price: formData.get('price'),
+      timestamp: new Date().toISOString(),
+      source: 'XRP SHIRUTO Landing Page'
+    };
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Menghantar...';
+
+    // Push order data to Google Sheet ("Excel") via Apps Script Web App.
+    // mode:'no-cors' is used because Apps Script web apps don't return
+    // CORS headers by default — this is a fire-and-forget request.
+    fetch(SHEET_ENDPOINT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain' },
+      body: JSON.stringify(payload)
+    }).catch(err => console.warn('Sheet submit warning:', err));
+
+    // Fire Facebook Pixel Purchase event
+    if (typeof fbq === 'function') {
+      fbq('track', 'Purchase', {
+        value: parseFloat(payload.price),
+        currency: 'MYR',
+        content_name: payload.package
+      });
+    }
+
+    // Show Malay thank-you message
+    setTimeout(() => {
+      thankYouModal.classList.add('open');
+      orderForm.reset();
+      packageLabels.forEach(l => l.classList.remove('selected'));
+      packageLabels[0].classList.add('selected');
+      packageValueInput.value = '1 Botol - RM69 + RM5 Penghantaran (Jumlah RM74)';
+      packagePriceInput.value = '74';
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Sahkan Tempahan';
+    }, 500);
+  });
+</script>
+
+</body>
+</html>
