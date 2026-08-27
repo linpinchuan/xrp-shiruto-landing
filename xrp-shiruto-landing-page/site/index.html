@@ -145,8 +145,18 @@
   .panel{
     background:#fff;border:1px solid var(--line);border-radius:var(--radius);
     overflow:hidden;box-shadow:var(--shadow);
+    display:block;position:relative;
   }
-  .panel img{width:100%;}
+  .panel img{width:100%;display:block;}
+  .panel.lb-trigger{cursor:zoom-in;}
+  .zoom-hint{
+    position:absolute;bottom:14px;right:14px;
+    background:rgba(27,37,100,.85);color:#fff;
+    font-family:'Inter';font-size:12px;font-weight:600;
+    padding:7px 12px;border-radius:999px;
+    display:flex;align-items:center;gap:6px;
+    pointer-events:none;
+  }
 
   .two-col{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;}
   .two-col.reverse .col-text{order:2;}
@@ -294,6 +304,14 @@
     .hero-ctas{flex-direction:column;align-items:stretch;}
     .hero-ctas .btn-primary,.hero-ctas .btn-ghost{justify-content:center;}
   }
+  @media (max-width:640px){
+    .section .wrap > .panel.full-bleed{
+      border-radius:0;
+      margin-left:-24px;margin-right:-24px;
+      width:calc(100% + 48px);
+      border-left:none;border-right:none;
+    }
+  }
   @media (max-width:400px){
     .testi-grid{grid-template-columns:1fr;}
   }
@@ -366,7 +384,13 @@
       <h2>Tiga bahan, satu matlamat — imuniti yang lebih bijak</h2>
       <p>Setiap kapsul XRP SHIRUTO diformulasikan dengan bahan aktif yang saling melengkapi, disokong lebih 40 tahun penyelidikan saintifik.</p>
     </div>
-    <div class="panel"><img src="images/ingredients.webp" alt="Bahan Utama XRP SHIRUTO: IP-PA1, Beta-Glukan, Vitamin C"></div>
+    <a class="panel full-bleed lb-trigger" href="images/ingredients.webp">
+      <img src="images/ingredients.webp" alt="Bahan Utama XRP SHIRUTO: IP-PA1, Beta-Glukan, Vitamin C">
+      <span class="zoom-hint">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="white" stroke-width="2"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+        Ketuk untuk perbesar
+      </span>
+    </a>
   </div>
 </section>
 
@@ -414,7 +438,13 @@
       <h2>Bukan sekadar dakwaan — disokong data</h2>
       <p>Keputusan kajian menunjukkan peningkatan ketara dalam pengaktifan makrofaj, perlindungan kulit dan pengawalaturan sistem imun.</p>
     </div>
-    <div class="panel"><img src="images/proof.webp" alt="Terbukti secara klinikal: pengaktifan makrofaj, melindungi badan, mengawal atur sistem imun"></div>
+    <a class="panel full-bleed lb-trigger" href="images/proof.webp">
+      <img src="images/proof.webp" alt="Terbukti secara klinikal: pengaktifan makrofaj, melindungi badan, mengawal atur sistem imun">
+      <span class="zoom-hint">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="white" stroke-width="2"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+        Ketuk untuk perbesar
+      </span>
+    </a>
   </div>
 </section>
 
@@ -428,14 +458,26 @@
       </div>
       <h2>Berpaten di lebih 10 buah negara</h2>
     </div>
-    <div class="panel"><img src="images/cert.webp" alt="Sijil paten XRP SHIRUTO dari Jepun, Amerika Syarikat dan lain-lain"></div>
+    <a class="panel full-bleed lb-trigger" href="images/cert.webp">
+      <img src="images/cert.webp" alt="Sijil paten XRP SHIRUTO dari Jepun, Amerika Syarikat dan lain-lain">
+      <span class="zoom-hint">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="white" stroke-width="2"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+        Ketuk untuk perbesar
+      </span>
+    </a>
   </div>
 </section>
 
 <!-- ============ WHO CAN USE ============ -->
 <section class="section alt">
   <div class="wrap">
-    <div class="panel"><img src="images/who-can-use.webp" alt="XRP SHIRUTO disyorkan untuk kanak-kanak, orang dewasa dan orang tua"></div>
+    <a class="panel full-bleed lb-trigger" href="images/who-can-use.webp">
+      <img src="images/who-can-use.webp" alt="XRP SHIRUTO disyorkan untuk kanak-kanak, orang dewasa dan orang tua">
+      <span class="zoom-hint">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="white" stroke-width="2"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+        Ketuk untuk perbesar
+      </span>
+    </a>
   </div>
 </section>
 
@@ -466,7 +508,13 @@
 <!-- ============ FAQ ============ -->
 <section class="section alt">
   <div class="wrap">
-    <div class="panel"><img src="images/qna.webp" alt="Soalan Lazim mengenai XRP SHIRUTO"></div>
+    <a class="panel full-bleed lb-trigger" href="images/qna.webp">
+      <img src="images/qna.webp" alt="Soalan Lazim mengenai XRP SHIRUTO">
+      <span class="zoom-hint">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="white" stroke-width="2"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+        Ketuk untuk perbesar
+      </span>
+    </a>
   </div>
 </section>
 
@@ -603,11 +651,11 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1009733641658524');
+fbq('init', 'YOUR_PIXEL_ID_HERE');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1009733641658524&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Facebook Pixel Code -->
 
@@ -617,7 +665,7 @@ src="https://www.facebook.com/tr?id=1009733641658524&ev=PageView&noscript=1"
 <!-- Script Web App URL. See README.md for setup instructions.    -->
 <!-- ============================================================ -->
 <script>
-  const SHEET_ENDPOINT_URL = "https://script.google.com/macros/s/AKfycbxtCyr6P_HBhLRYsLIqFIJu9vYg2cbcUIARp79AuDVjrUd9bYEWW_bTwmdzDZHdN_Oj/exec";
+  const SHEET_ENDPOINT_URL = "https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec";
 
   // ---- package selector ----
   const packageLabels = document.querySelectorAll('.package');
